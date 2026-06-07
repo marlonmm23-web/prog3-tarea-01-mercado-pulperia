@@ -71,7 +71,7 @@ public class Limpieza extends Producto implements Descontable {
 
     } else {
 
-        promo();
+        promo(); 
     }
 }
 }
