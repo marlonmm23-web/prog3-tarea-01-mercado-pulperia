@@ -31,19 +31,47 @@ public class Limpieza extends Producto implements Descontable {
         double total = getPrecioBase() * getCantidad() * 1.13 - aplicarDescuento();
         return total;
     }
-
+    
     // ABSTRACCIÓN / INTERFACE: implementa el contrato de Descontable.
     @Override
     public double aplicarDescuento() {
-        // TODO: monto que se descuenta al subtotal
-        return 0;
+        double subtotal = getPrecioBase() *getCantidad() *1.13;
+        return subtotal * porcentajeDescuento;
     }
 
     // ENCAPSULAMIENTO: setter con validación — el objeto controla su propio estado.
     // TODO: implementar setPorcentajeDescuento(double pct)
     //   Solo acepte valores en el rango válido para un porcentaje; informe si el valor es rechazado.
+    
+    public void setPorcentajeDescuento(double pct) {
 
+    if (pct >= 0 && pct <= 1) {
+
+        porcentajeDescuento = pct;
+
+    } else {
+
+        System.out.println(
+            "Descuento inválido: " + pct);
+    }
+}
     // OVERLOADING: misma operación, distinto contrato.
     // TODO: agregar promo() y promo(boolean conEtiqueta)
     //   Una versión imprime la promoción básica; la otra puede mostrar información adicional.
+      public void promo() {
+        System.out.println("Promoción en productos de limpieza");
+    }
+    
+    public void promo(boolean conEtiqueta) {
+
+    if (conEtiqueta) {
+
+        System.out.println(
+            "PROMO: Producto con descuento");
+
+    } else {
+
+        promo();
+    }
+}
 }
