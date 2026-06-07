@@ -65,6 +65,15 @@ public class Mercado {
     public static double totalDescuentos(Producto[] carrito) {
         // TODO: si p instanceof Descontable → cast → sumar aplicarDescuento()
         //   Pista: Descontable d = (Descontable) p;
-        return 0;
+        double total = 0;
+
+        for (Producto p : carrito) {
+
+        if (p instanceof Descontable d) {
+
+            total += d.aplicarDescuento();
+        }
+    }
+        return total;
     }
 }
