@@ -25,7 +25,16 @@ public class Mercado {
      */
     public static Producto masCaro(Producto[] carrito) {
         // TODO: recorra guardando el Producto con mayor precioFinal() visto hasta ahora
-        return null;
+         Producto mayor = carrito[0];
+
+        for (Producto p : carrito) {
+
+        if (p.precioFinal()> mayor.precioFinal()) {
+
+            mayor = p;
+        }
+    }
+        return mayor;
     }
 
     /**
@@ -34,7 +43,16 @@ public class Mercado {
      */
     public static Producto masBarato(Producto[] carrito) {
         // TODO: misma lógica que masCaro, condición invertida
-        return null;
+        Producto menor = carrito[0];
+
+        for (Producto p : carrito) {
+
+        if (p.precioFinal()< menor.precioFinal()) {
+
+            menor = p;
+        }
+    }
+        return menor;
     }
 
     /**
