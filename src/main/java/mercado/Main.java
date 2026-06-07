@@ -1,5 +1,8 @@
 package mercado;
 
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
+
 public class Main {
 
     // --- Demostración de paso de parámetros ---
@@ -15,7 +18,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+        
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        
         // -------------------------------------------------------
         // 1. ENCAPSULAMIENTO — paso de parámetros por referencia vs. por valor
         // -------------------------------------------------------
