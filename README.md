@@ -234,3 +234,5 @@ en Mercado.
 
 El loop polimórfico demuestra cómo objetos de distintos tipos pueden ser
 tratados como Producto y ejecutar su propio comportamiento.
+
+###Proyecto verificado para entrega.
