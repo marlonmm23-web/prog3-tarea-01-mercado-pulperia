@@ -224,3 +224,13 @@ En Windows puede usar clic derecho → Comprimir.
 
 Suba el `.zip` al aula virtual antes del **8 de junio de 2026**.
 Opcionalmente puede adjuntar también el link a su fork de GitHub.
+
+### Cambios realizados
+
+Se completó la clase Limpieza, implementando la interface Descontable.
+
+También se implementaron los métodos masCaro, masBarato y totalDescuentos
+en Mercado.
+
+El loop polimórfico demuestra cómo objetos de distintos tipos pueden ser
+tratados como Producto y ejecutar su propio comportamiento.
